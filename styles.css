@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Kaushan+Script&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+.header-name {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  text-align: center;
+}
+
+.main-name {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.sub-name {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.parent {
+  display: flex;
+}
+
+.main-button {
+  display: block;
+  width: 100px;
+  background-color: rgb(214, 154, 154);
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: rgb(96, 12, 12);
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+a:hover {
+  background-color: white;
+  color: rgb(96, 12, 12);
+}
+
+nav {
+  padding: 10px;
+  font-size: 1.2em;
+  color: yellow;
+  margin-bottom: 40px;
+}
+@media (min-width: 600px) {
+  nav {
+    padding: 20px;
+  }
+}
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+nav a {
+  font-size: 1.25rem;
+}
+@media (min-width: 42em) {
+  nav a {
+    font-size: 1.6rem;
+  }
+}
+
+nav.nav-grid {
+  background-color: rgb(96, 12, 12);
+}
+nav.nav-grid ul {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+}
+@media (min-width: 600px) {
+  nav.nav-grid ul {
+    grid-template-columns: 1fr repeat(3, fit-content(50px));
+    grid-gap: 20px;
+    justify-items: end;
+  }
+}
+nav.nav-grid .fullwidth {
+  grid-column: 1/4;
+}
+@media (min-width: 600px) {
+  nav.nav-grid .fullwidth {
+    grid-column: 1/2;
+    justify-self: start;
+  }
+}
+
+.parent {
+  display: flex;
+  font-family: arial, sans-serif;
+  padding: 0 40px 40px 40px;
+}
+
+#about {
+  padding: 0 100px 100px 100px;
+}
+
+.item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: rgba(238, 238, 238, 0.8823529412);
+  min-height: 500px;
+}
+
+.item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: rgba(238, 238, 238, 0.8823529412);
+  min-height: 300px;
+}
+
+.text-box {
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .parent {
+    flex-direction: column-reverse;
+  }
+  .item {
+    width: auto;
+    min-height: 200px;
+  }
+  .last {
+    background: #aa0000;
+  }
+}/*# sourceMappingURL=styles.css.map */

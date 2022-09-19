@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Kaushan+Script&display=swap');
+
+$main-font: 'Fira Sans', sans-serif;
+$accent-font: 'Kaushan Script', cursive;
+$accent-color: rgb(96, 12, 12);
+$button-color: rgb(214, 154, 154);
+
+html {
+    // font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background-color: white;
+    font-family: $main-font;
+}
+
+// *, *::before, *::after {
+//     box-sizing: inherit;
+// }
+
+a {
+    color: white;
+}
+
+.header-name {
+  display: block;
+  font-family: $accent-font;
+  text-align: center;
+}
+
+.main-name {
+  display: block;
+  font-family: $accent-font;
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.sub-name {
+  display: block;
+  font-family: $accent-font;
+  font-size: 3rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.parent {
+  display: flex;
+  // flex-direction: row;
+  // font-family: arial, sans-serif;
+}
+
+.main-button {
+  display: block;
+  width: 100px;
+  background-color: $button-color;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: $accent-color;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    background-color: white;
+    color: $accent-color;
+  }
+}
+
+nav {
+    padding: 10px;
+    font-size: 1.2em;
+    color: yellow;
+    margin-bottom: 40px;
+
+    @media (min-width: 600px){
+        padding: 20px;
+    }   
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;      
+    }
+
+    a {
+      font-size: 1.25rem;
+      
+      @media (min-width: 42em){
+        font-size: 1.6rem;
+      }
+    }
+}
+
+nav.nav-grid {
+  background-color: $accent-color;
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 10px;
+        justify-content: center;
+        justify-items: center;
+
+        @media (min-width: 600px){
+            grid-template-columns: 1fr repeat(3, fit-content(50px));
+            grid-gap: 20px;
+            justify-items: end;
+        }
+    }
+
+    .fullwidth {
+        grid-column: 1 / 4;
+
+        @media (min-width: 600px){
+            grid-column: 1 / 2;
+            justify-self: start;
+        }
+    }
+
+}
+
+
+.parent {
+  display: flex;
+  font-family: arial, sans-serif;
+  padding: 0 40px 40px 40px;
+}
+
+#about {
+  padding: 0 100px 100px 100px;
+}
+
+.item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: #eeeeeee1;
+  min-height: 500px;
+  // margin: 0 auto;
+}
+
+.item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: #eeeeeee1;
+  min-height: 300px;
+  // margin: 0 auto;
+}
+.text-box {
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 0 auto;
+
+  // background: rgba(204, 204, 204, 0.928);
+}
+
+@media screen and (max-width: 600px){
+  
+  .parent {
+    flex-direction: column-reverse;  
+  }
+  
+  .item {
+    width: auto;
+    min-height: 200px;
+  }
+  
+  .last {
+    background: #aa0000;
+  }
+  
+}
