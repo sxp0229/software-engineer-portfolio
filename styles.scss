@@ -43,15 +43,16 @@ a {
 .sub-name {
   display: block;
   font-family: $accent-font;
-  font-size: 3rem;
+  font-size: 17px;
   text-align: center;
   margin: 5px;
 }
 
 .parent {
   display: flex;
-  // flex-direction: row;
-  // font-family: arial, sans-serif;
+  justify-content: center;
+  padding: 0 40px 40px 40px;
+  border: 5px red;
 }
 
 .main-button {
@@ -74,6 +75,35 @@ a {
   }
 }
 
+#ul-tech-skills {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;      
+}
+
+.icon-row-container {
+  // font-weight: 2000;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+}
+
+@media (min-width: 600px) {
+  .icon-row-container { grid-template-columns: repeat(7, 1fr); }
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: $main-font;
+  align-items: center;
+  color: $accent-color;
+  
+}
 nav {
     padding: 10px;
     font-size: 1.2em;
@@ -127,14 +157,9 @@ nav.nav-grid {
 }
 
 
-.parent {
-  display: flex;
-  font-family: arial, sans-serif;
-  padding: 0 40px 40px 40px;
-}
-
 #about {
-  padding: 0 100px 100px 100px;
+  padding: 0 100px 50px 100px;
+  background-color: white;
 }
 
 .item {
@@ -142,27 +167,42 @@ nav.nav-grid {
   padding: 2em;
   color: #ffffff;
   background: #eeeeeee1;
-  min-height: 500px;
+  min-height: 400px;
   // margin: 0 auto;
 }
 
-.item {
-  width: 50%;
-  padding: 2em;
-  color: #ffffff;
-  background: #eeeeeee1;
-  min-height: 300px;
-  // margin: 0 auto;
-}
 .text-box {
   color: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // margin: 0 auto;
-
-  // background: rgba(204, 204, 204, 0.928);
 }
+
+.card {
+  padding: 1rem;
+  background-color: $button-color;
+  color: white;
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+}
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  }
+  
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
 
 @media screen and (max-width: 600px){
   
@@ -179,4 +219,17 @@ nav.nav-grid {
     background: #aa0000;
   }
   
+  #about {
+    padding: 0 50px 50px 50px;
+    background-color: white;
+  }
+}
+
+footer {
+  display: flex;
+  background-color: $accent-color;
+  color: white;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
 }
